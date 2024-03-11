@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: url('../IMG/roquitas.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    overflow: scroll;
+}
+
+nav {
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: "Roboto", sans-serif;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav a {
+    color: white;
+    display: flex;
+    align-self: center;
+}
+
+nav a:hover {
+    color: red;
+}
+
+#ghibli-data {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ghibliDiv {
+    backdrop-filter: blur(10px);
+    border: solid 1px grey;
+    width: 80%;
+    align-self: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    margin: 3%;
+    transition: scale 0.5s ease;
+}
+
+.ghibliDiv:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.imgContainer {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    padding: 2%;
+}
+
+.imgContainer img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    color: black;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

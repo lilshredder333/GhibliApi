@@ -1,19 +1,20 @@
 axios.get('https://ghibli.rest/films')
     .then(response => {
         /* obtenemos lista de peliculas */
-        const films = response.data;
+        const directors = response.data;
+        console.log(response.data);
 
         /* añadir las peliculas al html */
         const ghibliDiv = document.getElementById('ghibli-data');
 
-        films.forEach(film => {
+        directors.forEach(director => {
 
             ghibliDiv.innerHTML += `
             
                 <div> 
 
-                    <img src="${film.image}" alt="${film.title}" style="max-width: 300px">
-                        <h2> ${film.title}</h2> 
+                    <img src="${director.movie_banner}" alt="${director.director}" style="max-width: 300px">
+                        <h2> ${director.director}</h2> 
                 </div> 
 
             `;

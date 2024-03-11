@@ -8,18 +8,30 @@
     <meta name="description" content="Free Web tutorials">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
-
     <link rel="icon" type="image/x-icon" href="../IMG/FAVICON/cora-mediano.png">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/films.css">
+    <title>All Ghibli Films</title>
 </head>
 
 <body>
     <nav>
-   </nav>
+        <a href="HTML/allFilms.html">Films</a>
+        <a href="HTML/allDirectors.html">Director</a>
+        <a href="HTML/allPeople.html">People</a>
+    </nav>
     <div id="ghibli-data"></div>
-    <script src="../JS/script.js"></script>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="popup-title"></div>
+            <div id="popup-Originaltitle"></div>
+            <div id="popup-director"></div>
+            <div id="popup-release-date"></div>
+            <div id="popup-running-time"></div>
+            <img id="popup-image" src="" alt="" style="max-width: 300px;">
+        </div>
+    </div>
+    <script src="../JS/allFilms.js"></script>
 </body>
 
 </html>

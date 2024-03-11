@@ -35,6 +35,7 @@ function showPopup(title, original_title, director, releaseDate, runningTime, im
     console.log("Release Date:", releaseDate);
     console.log("Running Time:", runningTime);
     console.log("Image:", image);
+    
     const popup = document.getElementById('popup');
     const popupTitle = document.getElementById('popup-title');
     const popupOriginalTitle = document.getElementById('popup-Originaltitle');
@@ -57,3 +58,4 @@ function closePopup() {
     document.getElementById('popup').style.display = 'none';
     document.body.classList.remove('popup-visible');
 }
+

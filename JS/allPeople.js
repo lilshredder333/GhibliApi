@@ -10,10 +10,7 @@ function fetchPeopleData() {
                 personDiv.classList.add('personDiv');
                 personDiv.innerHTML = `
                     <h2>${person.name}</h2>
-                    <p>Age: ${person.age}</p>
-                    <p>Eye Color: ${person.eye_color}</p>
                     <p>Gender: ${person.gender}</p>
-                    <p>Hair Color: ${person.hair_color}</p>
                 `;
 
                 // Agregar el elemento a la página

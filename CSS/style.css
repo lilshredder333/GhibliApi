@@ -8,21 +8,32 @@
     text-decoration: none;
 }
 
-.data-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+body{
+    height: 100%;
 }
 
-/* Estilos para los íconos */
-.icon {
-    display: inline-block;
-    margin: 10px;
+#nav {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 10px;
+    background-image: url(../IMG/roquitas.jpg);
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+}
+
+#nav a {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
     text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Estilos para los nombres de los íconos */
-.icon-name {
-    margin-top: 5px;
-    font-size: 14px;
+#nav a:hover {
+    background-color: #555;
 }

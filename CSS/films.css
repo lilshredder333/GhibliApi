@@ -1,11 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* Estilos base para todas las pantallas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+
+/* Barras de desplazamiento horizontales */
+::-webkit-scrollbar:horizontal {
+    height: 4px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: red;
 }
 
 body {
@@ -22,7 +42,6 @@ nav {
     width: 100%;
     height: 40px;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     font-family: "Roboto", sans-serif;
     position: fixed;
@@ -33,7 +52,7 @@ nav {
 nav a {
     color: white;
     display: flex;
-    align-self: center;
+    align-items: center;
 }
 
 nav a:hover {
@@ -44,12 +63,11 @@ nav a:hover {
     margin-top: 70px;
     display: flex;
     flex-direction: column;
-    width: 100%;
     overflow: hidden;
     margin-bottom: 14.5%;
 }
 
-.ghibliDiv {
+.ghibliDiv, .personDiv {
     backdrop-filter: blur(10px);
     border: solid 1px grey;
     width: 80%;
@@ -63,11 +81,10 @@ nav a:hover {
     transition: scale 0.5s ease;
 }
 
-.ghibliDiv:hover {
+.ghibliDiv:hover, .personDiv:hover {
     scale: 1.1;
     cursor: pointer;
 }
-
 
 .imgContainer {
     width: 200px;
@@ -89,7 +106,6 @@ nav a:hover {
     top: 0;
     width: 100%;
     min-height: 100vh;
-    min-height: 100vh;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
     height: 100vh;
@@ -108,29 +124,51 @@ nav a:hover {
     max-width: 600px;
     position: relative;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    padding-top: 50px;
+
 }
 
-.popup-content h2, h3{
+.popup-content h2{
     color: white;
-}
+    padding: 1%;
+} 
 
-.popup-content p{
-    color: rgb(33, 33, 33);
+
+.popup-content h3{
+    color: white;
+    padding: 1%;
+} 
+
+.popup-content p {
+    color: white;
     font-weight: 600;
-    filter: drop-shadow(-2px 2px 4px white);
-
+    filter: drop-shadow(-2px 2px 4px black);
+    padding: 1%;
 }
 
-#popup-image{
-    width: 200px;
-    height: 300px;
+#popup-image {
+    width: 140px;
+    height: 200px;
+    border-radius: 10px;
+    position: absolute;
+    right: 50px;
+    top: 120px;
 }
+
+
 
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    z-index: 1;
 }
 
 .close:hover,
@@ -140,21 +178,28 @@ nav a:hover {
     cursor: pointer;
 }
 
-.personDiv {
-    backdrop-filter: blur(10px);
-    border: solid 1px grey;
-    width: 80%;
-    align-self: center;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-    margin: 3%;
-    transition: scale 0.5s ease;
-}
+/* Media query para pantallas de ordenador */
+@media screen and (min-width: 768px) {
+    nav {
+        justify-content: space-around;
+    }
 
-.personDiv:hover {
-    scale: 1.1;
-    cursor: pointer;
+    #ghibli-data {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1200px;
+        margin-top: 70px;
+    }
+
+    .ghibliDiv, .personDiv {
+        width: 25%;
+        margin: 1%;
+        min-height: 150px;
+        text-align: center;
+    }
+
+
 }
